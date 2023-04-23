@@ -1,0 +1,47 @@
+@font-face {
+  font-family: 'Syne';
+  src: url('../assets/fonts/Syne.ttf');
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src: url('../assets/fonts/Roboto-Regular.ttf');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src: url('../assets/fonts/Roboto-Medium.ttf');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src: url('../assets/fonts/Roboto-Bold.ttf');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src: url('../assets/fonts/Roboto-Black.ttf');
+  font-weight: 900;
+  font-style: normal;
+}
+
+:root {
+  --ion-default-font: 'Roboto', sans-serif;
+  --ion-font-family: 'Roboto', sans-serif;
+}
+
+h6,
+h5,
+h4,
+h3,
+h2,
+h1,
+.syne {
+  font-family: 'Syne', sans-serif;
+}

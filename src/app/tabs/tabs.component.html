@@ -1,0 +1,27 @@
+<ion-tabs>
+  <ion-tab-bar slot="bottom">
+    <ion-tab-button tab="super-tab" (click)="scrollTopFeed()">
+      <img src="assets/icons/tabs/home-active.svg" class="img-icon" alt="super tabs" />
+      <p class="active">Home</p>
+    </ion-tab-button>
+
+    <ion-tab-button tab="super-tab" routerLink="/search">
+      <img src="assets/icons/tabs/search.svg" class="img-icon" alt="buscar" />
+      <p>Buscar</p>
+    </ion-tab-button>
+
+    <ion-tab-button class="throb" (click)="createPublication()">
+      <img src="assets/icons/tabs/plus.svg" class="img-icon" alt="criar publicação" />
+    </ion-tab-button>
+
+    <ion-tab-button tab="super-tab" routerLink="/home-turn-it">
+      <img src="assets/icons/tabs/turn-it.svg" class="img-icon" alt="turn-it" />
+      <p>Turn It</p>
+    </ion-tab-button>
+
+    <ion-tab-button tab="super-tab" routerLink="/profile">
+      <img src="assets/icons/tabs/user.svg" class="img-icon" alt="meu perfil" />
+      <p>Perfil</p>
+    </ion-tab-button>
+  </ion-tab-bar>
+</ion-tabs>

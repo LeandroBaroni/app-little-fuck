@@ -1,0 +1,31 @@
+ion-tab-bar {
+  contain: none;
+  --background: var(--ion-color-background);
+  border-top: 1px solid #d7bdf152;
+}
+
+p {
+  margin: 0;
+  color: var(--ion-color-tertiary-tint);
+}
+
+.active {
+  color: #6f40ff;
+}
+
+img {
+  margin-bottom: 4px;
+}
+
+.throb {
+  height: 120px;
+  background: transparent;
+
+  img {
+    margin-bottom: 36px;
+    height: 64px;
+    z-index: 20;
+    position: absolute;
+    top: -2px;
+  }
+}
