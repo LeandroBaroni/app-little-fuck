@@ -1,3 +1,4 @@
 export enum FirestoreCollecionName {
-  ROUNDS = 'rounds'
+  ROUNDS = 'rounds',
+  USERS = 'users'
 }

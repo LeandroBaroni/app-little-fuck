@@ -1,0 +1,17 @@
+{
+  "appId": "",
+  "plugins": {
+    "FirebaseAuth": {
+      "providers": [
+        "google.com",
+        "facebook.com",
+        "twitter.com",
+        "github.com",
+        "password"
+      ],
+      "languageCode": "en"
+    },
+    "FirebaseAnalytics": {},
+    "FirebaseCrashlytics": {}
+  }
+}
