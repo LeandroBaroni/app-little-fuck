@@ -8,6 +8,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RouteReuseStrategy } from '@angular/router';
 import { Capacitor } from '@capacitor/core';
+import { environment } from '@environment';
 import { SuperTabsModule } from '@ionic-super-tabs/angular';
 import { IonicModule, IonicRouteStrategy } from '@ionic/angular';
 
@@ -16,7 +17,6 @@ import { ApiErrorInterceptor } from './core/interceptors/api-error.interceptor';
 import { JwtInterceptor } from './core/interceptors/jwt.interceptor';
 import { UrlInterceptor } from './core/interceptors/url.interceptor';
 import { AppRoutingModule } from './routes/app.routing';
-import { environment } from '@environment';
 
 @NgModule({
   declarations: [
