@@ -1,7 +1,7 @@
 <div class="users" *ngIf="users.length > 0; else emptyTemplate">
   <div class="user" *ngFor="let user of users; let i = index" [style.zIndex]="users.length" (touchstart)="touchStart($event)" (touchmove)="touchMove($event, i)" (touchend)="touchEnd(i)" [id]="'card-'+i">
-    <ion-card mode="ios">
-      <ion-card-content mode="md">
+    <ion-card>
+      <ion-card-content>
         <img [src]="user.photo" alt="" />
 
         <ion-item lines="none">
@@ -13,7 +13,7 @@
       </ion-card-content>
     </ion-card>
   </div>
-  <!-- icons -->
+  <!-- icons ao mover -->
   <ion-icon name="heart-dislike" class="icon" color="danger" id="reject-icon"></ion-icon>
   <ion-icon name="heart" class="icon" color="primary" id="accept-icon"></ion-icon>
 </div>

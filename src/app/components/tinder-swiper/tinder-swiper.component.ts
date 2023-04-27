@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { IonicModule } from '@ionic/angular';
 
@@ -16,7 +16,7 @@ interface IUser {
   templateUrl: './tinder-swiper.component.html',
   styleUrls: ['./tinder-swiper.component.scss']
 })
-export class TinderSwiperComponent implements OnInit {
+export class TinderSwiperComponent {
   users: Array<IUser> = [
     {
       id: '1',
@@ -71,12 +71,6 @@ export class TinderSwiperComponent implements OnInit {
 
   startX: number = 0;
   endX: number = 0;
-
-  constructor() {}
-
-  ngOnInit() {
-    console.log(this.users);
-  }
 
   touchStart(evt: any) {
     this.startX = evt.touches[0].pageX
