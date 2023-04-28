@@ -17,10 +17,9 @@
   position: relative;
 }
 
-
 ion-modal {
   &::part(content) {
-    background: transparent;
+    background: var(--bs-primary);
   }
 
   &.modal-select {

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { IonicModule } from '@ionic/angular';
 
@@ -10,5 +10,9 @@ import { IonicModule } from '@ionic/angular';
   styleUrls: ['./topbar.component.scss']
 })
 export class TopbarComponent {
+  @Output() addParticipantEvent: EventEmitter<boolean> = new EventEmitter();
 
+  addParticipant() {
+    this.addParticipantEvent.emit(true)
+  }
 }

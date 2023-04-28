@@ -1,1 +1,25 @@
-<app-topbar></app-topbar>
+<app-topbar (addParticipantEvent)="setParticipant($event)"></app-topbar>
+
+<ion-content class="ion-padding">
+  <h1 class="ion-text-center">Participantes</h1>
+  <ion-row class="ion-margin-top" *ngIf="round">
+    <ion-col size="4" *ngFor="let participant of round?.participants">
+      <div>
+        <h3 class="ion-text-center">{{ participant.name }}</h3>
+        <h5 class="ion-text-center">{{ participant.points }}</h5>
+      </div>
+    </ion-col>
+  </ion-row>
+
+</ion-content>
+<div class="d-flex ion-justify-content-center">
+  <ion-button shape="fill" (click)="refreshRound()">Atualizar</ion-button>
+</div>
+
+<ion-footer>
+  <ion-toolbar>
+    <div class="d-flex ion-justify-content-center">
+      <ion-button [disabled]="round?.participants.length >= 2">Começar</ion-button>
+    </div>
+  </ion-toolbar>
+</ion-footer>
