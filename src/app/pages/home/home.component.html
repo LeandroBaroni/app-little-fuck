@@ -1,13 +1,21 @@
 <app-topbar (addParticipantEvent)="setParticipant($event)"></app-topbar>
 
 <ion-content class="ion-padding">
-  <h1 class="ion-text-center">Participantes</h1>
+  <h1 class="ion-text-center">Jogadores</h1>
   <ion-row class="ion-margin-top" *ngIf="round">
-    <ion-col size="4" *ngFor="let participant of round?.participants">
-      <div>
+    <ion-col size="6" *ngFor="let participant of round?.participants">
+      <ion-card>
         <h3 class="ion-text-center">{{ participant.name }}</h3>
-        <h5 class="ion-text-center">{{ participant.points }}</h5>
-      </div>
+        <div class="d-flex ion-align-items-center ion-justify-content-around">
+          <ion-button (click)="removePoints(participant)">
+            <ion-icon name="remove-outline"></ion-icon>
+          </ion-button>
+          <h5 class="ion-text-center">{{ participant.points }}</h5>
+          <ion-button (click)="addPoints(participant)">
+            <ion-icon name="add-outline"></ion-icon>
+          </ion-button>
+        </div>
+      </ion-card>
     </ion-col>
   </ion-row>
 
@@ -19,7 +27,7 @@
 <ion-footer>
   <ion-toolbar>
     <div class="d-flex ion-justify-content-center">
-      <ion-button [disabled]="round?.participants.length >= 2">Começar</ion-button>
+      <ion-button [disabled]="round?.participants.length <= 2">Começar</ion-button>
     </div>
   </ion-toolbar>
 </ion-footer>
