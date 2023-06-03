@@ -16,6 +16,8 @@ export class ModalWinnerService {
         participant
       },
       cssClass: 'modal-winner',
+      backdropDismiss: true,
+      animated: true
     });
 
     await modalRef.present();

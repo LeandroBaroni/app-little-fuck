@@ -1,7 +1,7 @@
-import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { Component } from '@angular/core';
+import { IonicModule, ModalController } from '@ionic/angular';
 import { Participant } from '@models/round.interface';
-import { IonicModule } from '@ionic/angular';
 
 @Component({
   selector: 'app-modal-winner',
@@ -12,4 +12,10 @@ import { IonicModule } from '@ionic/angular';
 })
 export class ModalWinnerComponent {
   participant: Participant;
+
+  constructor(private modalController: ModalController) {}
+
+  async dismiss() {
+    await this.modalController.dismiss();
+  }
 }
