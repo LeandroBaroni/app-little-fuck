@@ -5,7 +5,7 @@ import { IonicModule } from '@ionic/angular';
 import { HomePage } from './home.page';
 import { RouterModule, Routes } from '@angular/router';
 import { TopbarComponent } from 'src/app/layouts/topbar/topbar.component';
-import { TinderSwiperComponent } from '@components/tinder-swiper/tinder-swiper.component';
+import { SidebarComponent } from 'src/app/layouts/sidebar/sidebar.component';
 
 const routes: Routes = [
   {
@@ -22,7 +22,7 @@ const routes: Routes = [
     IonicModule,
     RouterModule.forChild(routes),
     TopbarComponent,
-    TinderSwiperComponent
+    SidebarComponent
   ]
 })
 

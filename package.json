@@ -8,6 +8,8 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
+    "deploy": "firebase use default && ng build && firebase deploy --only hosting",
+    "android": "ionic cap run android --open",
     "build-apk": "ng build --prod && npx cap copy && npx cap sync && npx cap open android"
   },
   "private": true,
