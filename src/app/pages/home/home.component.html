@@ -8,10 +8,10 @@
   <h1 class="ion-text-center">Jogadores</h1>
   <h4 class="ion-text-center">Rodada: {{ round?.quantityRound }}</h4>
   <ion-row class="ion-margin-top" *ngIf="round">
-    <ion-col size="6" *ngFor="let participant of round.participants; let i =index">
+    <ion-col size="6" *ngFor="let participant of round.participants; let i = index">
       <ion-card>
         <div class="d-flex ion-justify-content-end column-icon">
-          <ion-icon name="close-circle-outline" (click)="removeParticipant(i)"/>
+          <ion-icon name="close-circle-outline" (click)="removeParticipant(i)" />
         </div>
         <h3 class="ion-text-center">{{ participant.name }}</h3>
         <div class="d-flex ion-align-items-center ion-justify-content-around">
@@ -28,22 +28,13 @@
   </ion-row>
 </ion-content>
 <div class="d-flex ion-justify-content-center">
-  <ion-button
-    shape="fill"
-    (click)="refreshRound()"
-    [disabled]="round.quantityRound === 0"
-  >
-    Atualizar
-  </ion-button>
+  <ion-button shape="fill" (click)="refreshRound()" [disabled]="round.quantityRound === 0"> Atualizar </ion-button>
 </div>
 
 <ion-footer>
   <ion-toolbar>
     <div class="d-flex ion-justify-content-center">
-      <ion-button
-        [disabled]="round?.participants.length < 2 || round.quantityRound > 0"
-        (click)="beginRound()"
-      >
+      <ion-button [disabled]="round?.participants.length < 2 || round.quantityRound > 0" (click)="beginRound()">
         Começar
       </ion-button>
     </div>

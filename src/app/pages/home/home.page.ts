@@ -115,8 +115,10 @@ export class HomePage implements OnInit , OnDestroy{
       await this.roundRepository.add(this.round);
       await this.winnerService.open(participant);
       this.getParticipants();
+      LocalStorage.removeItem('round');
+    } else {
+      LocalStorage.setItem('round', JSON.stringify(this.round));
     }
-    LocalStorage.setItem('round', JSON.stringify(this.round));
   }
 
   removePoints(participant: Participant) {

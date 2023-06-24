@@ -1,6 +1,6 @@
 {
   "name": "app-little-fuck",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "scripts": {
     "ng": "ng",
     "dev": "ng serve -o --port 8001",
@@ -9,6 +9,7 @@
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "deploy": "firebase use default && ng build && firebase deploy --only hosting",
+    "deploy-t": "npm --no-git-tag-version version patch && firebase deploy",
     "android": "ionic cap run android --open",
     "build-apk": "ng build --prod && npx cap copy && npx cap sync && npx cap open android"
   },

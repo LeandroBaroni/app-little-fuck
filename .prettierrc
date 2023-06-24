@@ -4,5 +4,14 @@
   "printWidth": 120,
   "trailingComma": "none",
   "arrowParens": "avoid",
-  "endOfLine": "auto"
+  "endOfLine": "auto",
+  "overrides": [
+    {
+      "files": ["**/*.css", "**/*.scss", "**/*.html"],
+      "options": {
+        "singleQuote": false,
+        "bracketSpacing": true
+      }
+    }
+  ]
 }
